@@ -30,20 +30,20 @@ print(correlation_df)
 # plt.show()
 
 
-# username = 'root'
-# password = 'pwd12345'
-# host = 'localhost'
-# port = 3306
-# database = 'practice'
-#
-# connection_string = f'mysql+pymysql://{username}:{password}@{host}:{port}/{database}'
-#
-# engine = create_engine(connection_string)
-#
-# connection = engine.connect()
-#
-# closing_percentage_df.to_sql(name='stock_price_correlation', con=engine, if_exists='replace', index=False)
-#
-# print('DF saved in DB')
-#
-# connection.close()
+username = 'root'
+password = 'pwd12345'
+host = 'localhost'
+port = 3306
+database = 'practice'
+
+connection_string = f'mysql+pymysql://{username}:{password}@{host}:{port}/{database}'
+
+engine = create_engine(connection_string)
+
+connection = engine.connect()
+
+closing_percentage_df.to_sql(name='stock_price_correlation', con=engine, if_exists='replace', index=False)
+
+print('DF saved in DB')
+
+connection.close()
